@@ -28,7 +28,7 @@ exit /b
 :on_failure
 set HAS_FAILED=1
 if "%IS_MUTED%"=="0" (
-    call play_sound.vbs "on_finished__failure.mp3"
+    call play_sound.vbs "%~dp0on_finished__failure.mp3"
 )
 if "%VISUAL_NOTIF%"=="0" (
     REM TODO
@@ -38,7 +38,7 @@ exit /b
 
 :on_success
 if "%IS_MUTED%"=="0" (
-    call play_sound.vbs "on_finished__success.wav"
+    call play_sound.vbs "%~dp0on_finished__success.wav"
 )
 if "%VISUAL_NOTIF%"=="0" (
     REM TODO
